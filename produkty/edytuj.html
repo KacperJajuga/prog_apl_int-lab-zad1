@@ -21,7 +21,27 @@
       class="card d-flex align-items-center justify-content-center"
     >
       <div class="d-flex align-items-center justify-content-center">
-        <div class="card-body mx-5"></div>
+        <div class="card-body mx-5">
+          <h1 class="text-center card-title" id="title">
+            <b>Edycja produktu:</b>
+          </h1>
+          <p class="text-center" id="imgText">Obecny obraz:</p>
+          <div class="text-center d-flex justify-content-center my-3">
+            <div style="width: 40vh; height: 40vh">
+              <img id="image" style="max-width: 100%; max-height: 100%" />
+            </div>
+          </div>
+          <div>
+            <label for="formFile" class="form-label"
+              >Załaduj obraz dla produktu:</label
+            >
+            <input
+              class="form-control form-control"
+              id="formFile"
+              type="file"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -42,5 +62,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="edytuj.js"></script>
   </body>
 </html>
