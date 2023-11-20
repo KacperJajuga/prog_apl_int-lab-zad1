@@ -16,8 +16,6 @@ if (productsArray.length === 17) {
 
       productsArray = modifiedProducts;
     });
-} else {
-  console.log(productsArray);
 }
 
 const limitName = 60;
