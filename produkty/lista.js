@@ -1,6 +1,6 @@
 let productsArray = JSON.parse(localStorage.getItem("productsList")) || [];
 
-if (productsArray.length === 17) {
+if (productsArray.length === 0) {
   fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
     .then((json) => {
@@ -79,10 +79,12 @@ if (productsArray.length === 0) {
     const cardGroupButton = document.createElement("div");
     cardGroupButton.classList.add("d-flex");
     cardGroupButton.classList.add("justify-content-around");
+    cardGroupButton.classList.add("align-items-end");
 
     const cardButtonDisplay = document.createElement("a");
     cardButtonDisplay.classList.add("btn");
     cardButtonDisplay.classList.add("btn-primary");
+    cardButtonDisplay.classList.add("mx-1");
     cardButtonDisplay.textContent = "Wyświetl";
     cardButtonDisplay.href = "./wyswietl.html?id=" + product.id;
 
@@ -90,12 +92,14 @@ if (productsArray.length === 0) {
       const cardButtonChange = document.createElement("a");
       cardButtonChange.classList.add("btn");
       cardButtonChange.classList.add("btn-warning");
+      cardButtonChange.classList.add("mx-1");
       cardButtonChange.textContent = "Edytuj";
       cardButtonChange.href = "./edytuj.html?id=" + product.id;
 
       const cardButtonRemove = document.createElement("a");
       cardButtonRemove.classList.add("btn");
       cardButtonRemove.classList.add("btn-danger");
+      cardButtonRemove.classList.add("mx-1");
       cardButtonRemove.setAttribute("id", "delete" + product.id);
       cardButtonRemove.textContent = "Usuń";
 

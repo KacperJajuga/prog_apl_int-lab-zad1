@@ -12,6 +12,71 @@
     />
     <link href="../style.css" rel="stylesheet" />
   </head>
+  <div
+    style="height: 100vh"
+    class="d-flex justify-content-center align-items-center"
+  >
+    <div
+      style="width: 70vw"
+      class="card d-flex align-items-center justify-content-center"
+    >
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="card-body mx-5">
+          <h1 class="text-center card-title" id="title">
+            <b>Dodaj nowy produkt</b>
+          </h1>
+
+          <div class="d-flex justify-content-between my-2">
+            <div class="d-flex flex-column">
+              <label for="formFile" class="form-label"
+                >Dodaj obraz produktu:</label
+              >
+              <input
+                style="width: 40vh"
+                class="form-control me-3"
+                id="formFile"
+                type="file"
+              />
+            </div>
+            <div class="d-flex flex-column">
+              <label
+                for="formPrice"
+                class="form-label d-flex justify-content-end"
+                >Wprowadź cenę produktu:
+              </label>
+              <input
+                style="width: 40vh"
+                class="form-control ms-3"
+                id="formPrice"
+                type="number"
+                step="0.01"
+                min="0.01"
+              />
+            </div>
+          </div>
+          <div class="my-2">
+            <label for="formName" class="form-label"
+              >Wprowadź nazwę produktu:
+            </label>
+            <textarea class="form-control" id="formName" rows="1"></textarea>
+          </div>
+          <div class="my-2">
+            <label for="formDesc" class="form-label"
+              >Wprowadź opis produktu:
+            </label>
+            <textarea class="form-control" id="formDesc" rows="4"></textarea>
+          </div>
+          <div class="d-flex justify-content-around">
+            <button type="submit" class="btn btn-success my-3" id="Save">
+              Dodaj produkt
+            </button>
+            <button class="btn btn-danger my-3" id="Cancel">Anuluj</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -28,5 +93,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="dodaj.js"></script>
   </body>
 </html>

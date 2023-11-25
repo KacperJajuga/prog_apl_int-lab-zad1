@@ -27,19 +27,58 @@
           </h1>
           <p class="text-center" id="imgText">Obecny obraz:</p>
           <div class="text-center d-flex justify-content-center my-3">
-            <div style="width: 40vh; height: 40vh">
+            <div
+              class="d-flex align-items-center justify-content-center"
+              style="width: 40vh; height: 40vh"
+            >
               <img id="image" style="max-width: 100%; max-height: 100%" />
             </div>
           </div>
-          <div>
-            <label for="formFile" class="form-label"
-              >Załaduj obraz dla produktu:</label
-            >
-            <input
-              class="form-control form-control"
-              id="formFile"
-              type="file"
-            />
+          <div class="d-flex justify-content-between my-2">
+            <div class="d-flex flex-column">
+              <label for="formFile" class="form-label"
+                >Załaduj nowy obraz dla produktu:</label
+              >
+              <input
+                style="width: 40vh"
+                class="form-control me-3"
+                id="formFile"
+                type="file"
+              />
+            </div>
+            <div class="d-flex flex-column">
+              <label
+                for="formPrice"
+                class="form-label d-flex justify-content-end"
+                >Edytuj cenę produktu:
+              </label>
+              <input
+                style="width: 40vh"
+                class="form-control ms-3"
+                id="formPrice"
+                type="number"
+                step="0.01"
+                min="0.01"
+              />
+            </div>
+          </div>
+          <div class="my-2">
+            <label for="formName" class="form-label"
+              >Edytuj nazwę produktu:
+            </label>
+            <textarea class="form-control" id="formName" rows="1"></textarea>
+          </div>
+          <div class="my-2">
+            <label for="formDesc" class="form-label"
+              >Edytuj opis produktu:
+            </label>
+            <textarea class="form-control" id="formDesc" rows="4"></textarea>
+          </div>
+          <div class="d-flex justify-content-around">
+            <button type="submit" class="btn btn-success my-3" id="Save">
+              Zapisz zmiany
+            </button>
+            <button class="btn btn-danger my-3" id="Cancel">Anuluj</button>
           </div>
         </div>
       </div>
