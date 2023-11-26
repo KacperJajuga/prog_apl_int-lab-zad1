@@ -1,3 +1,7 @@
+if (localStorage.getItem("zalogowano") === "true") {
+  window.location.href = "./index.html";
+}
+
 let powodzenie = document.getElementById("powodzenie");
 powodzenie.style.display = "none";
 let niepowodzenie = document.getElementById("niepowodzenie");

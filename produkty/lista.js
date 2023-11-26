@@ -26,21 +26,25 @@ if (productsArray.length === 0) {
 } else {
   productsArray.forEach((product) => {
     const cardDiv = document.createElement("div");
-    cardDiv.classList.add("card");
-    cardDiv.classList.add("my-2");
-    cardDiv.classList.add("mx-2");
-    cardDiv.classList.add("d-flex");
-    cardDiv.classList.add("align-items-center");
-    cardDiv.classList.add("justify-content-center");
+    cardDiv.classList.add(
+      "card",
+      "d-flex",
+      "align-items-center",
+      "justify-content-center",
+      "my-2",
+      "mx-2"
+    );
     cardDiv.style.width = "18rem";
 
     const cardImgContainer = document.createElement("div");
-    cardImgContainer.classList.add("img-container");
-    cardImgContainer.classList.add("my-2");
+    cardImgContainer.classList.add(
+      "img-container",
+      "d-flex",
+      "align-items-center",
+      "my-2"
+    );
     cardImgContainer.style.width = "15rem";
     cardImgContainer.style.height = "15rem";
-    cardImgContainer.classList.add("d-flex");
-    cardImgContainer.classList.add("align-items-center");
 
     const img = document.createElement("img");
     img.classList.add("card-img-top");
@@ -66,8 +70,7 @@ if (productsArray.length === 0) {
       cardText.textContent =
         product.description.substring(0, limitDescr) + "... ";
       const cardLink = document.createElement("a");
-      cardLink.classList.add("link-underline-primary");
-      cardLink.classList.add("d-block");
+      cardLink.classList.add("link-underline-primary", "d-block");
       cardLink.textContent = "Zobacz więcej ->";
       cardLink.href = "./wyswietl.html?id=" + product.id;
 
@@ -77,29 +80,25 @@ if (productsArray.length === 0) {
     }
 
     const cardGroupButton = document.createElement("div");
-    cardGroupButton.classList.add("d-flex");
-    cardGroupButton.classList.add("justify-content-around");
-    cardGroupButton.classList.add("align-items-end");
+    cardGroupButton.classList.add(
+      "d-flex",
+      "justify-content-around",
+      "align-items-end"
+    );
 
     const cardButtonDisplay = document.createElement("a");
-    cardButtonDisplay.classList.add("btn");
-    cardButtonDisplay.classList.add("btn-primary");
-    cardButtonDisplay.classList.add("mx-1");
+    cardButtonDisplay.classList.add("btn", "btn-primary", "mx-1");
     cardButtonDisplay.textContent = "Wyświetl";
     cardButtonDisplay.href = "./wyswietl.html?id=" + product.id;
 
     if (localStorage.getItem("zalogowano") === "true") {
       const cardButtonChange = document.createElement("a");
-      cardButtonChange.classList.add("btn");
-      cardButtonChange.classList.add("btn-warning");
-      cardButtonChange.classList.add("mx-1");
+      cardButtonChange.classList.add("btn", "btn-warning", "mx-1");
       cardButtonChange.textContent = "Edytuj";
       cardButtonChange.href = "./edytuj.html?id=" + product.id;
 
       const cardButtonRemove = document.createElement("a");
-      cardButtonRemove.classList.add("btn");
-      cardButtonRemove.classList.add("btn-danger");
-      cardButtonRemove.classList.add("mx-1");
+      cardButtonRemove.classList.add("btn", "btn-danger", "mx-1");
       cardButtonRemove.setAttribute("id", "delete" + product.id);
       cardButtonRemove.textContent = "Usuń";
 
