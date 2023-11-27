@@ -27,27 +27,23 @@
             <b>Dodaj nowy produkt</b>
           </h1>
 
-          <div class="d-flex justify-content-between my-2">
-            <div class="d-flex flex-column">
+          <div
+            class="d-flex flex-column flex-lg-row justify-content-evenly my-2"
+          >
+            <div class="d-flex flex-column me-0 me-lg-3">
               <label for="formFile" class="form-label"
                 >Dodaj obraz produktu:</label
               >
-              <input
-                style="width: 40vh"
-                class="form-control me-3"
-                id="formFile"
-                type="file"
-              />
+              <input class="form-control" id="formFile" type="file" />
             </div>
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column ms-0 ms-lg-3">
               <label
                 for="formPrice"
-                class="form-label d-flex justify-content-end"
+                class="form-label d-flex justify-content-lg-end mt-1 mt-lg-0"
                 >Wprowadź cenę produktu:
               </label>
               <input
-                style="width: 40vh"
-                class="form-control ms-3"
+                class="form-control"
                 id="formPrice"
                 type="number"
                 step="0.01"

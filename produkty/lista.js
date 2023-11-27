@@ -87,18 +87,18 @@ if (productsArray.length === 0) {
     );
 
     const cardButtonDisplay = document.createElement("a");
-    cardButtonDisplay.classList.add("btn", "btn-primary", "mx-1");
+    cardButtonDisplay.classList.add("btn", "btn-outline-primary", "mx-1");
     cardButtonDisplay.textContent = "Wyświetl";
     cardButtonDisplay.href = "./wyswietl.html?id=" + product.id;
 
     if (localStorage.getItem("zalogowano") === "true") {
       const cardButtonChange = document.createElement("a");
-      cardButtonChange.classList.add("btn", "btn-warning", "mx-1");
+      cardButtonChange.classList.add("btn", "btn-outline-warning", "mx-1");
       cardButtonChange.textContent = "Edytuj";
       cardButtonChange.href = "./edytuj.html?id=" + product.id;
 
       const cardButtonRemove = document.createElement("a");
-      cardButtonRemove.classList.add("btn", "btn-danger", "mx-1");
+      cardButtonRemove.classList.add("btn", "btn-outline-danger", "mx-1");
       cardButtonRemove.setAttribute("id", "delete" + product.id);
       cardButtonRemove.textContent = "Usuń";
 

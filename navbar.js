@@ -19,7 +19,7 @@ if (currLoc === "index.html" || currLoc === "logowanie.html") {
 }
 
 const toggleButton = document.createElement("button");
-toggleButton.classList.add("navbar-toggler");
+toggleButton.classList.add("navbar-toggler", "collapsed");
 toggleButton.setAttribute("type", "button");
 toggleButton.setAttribute("data-bs-toggle", "collapse");
 toggleButton.setAttribute("data-bs-target", "#navbarNav");
@@ -112,10 +112,10 @@ if (zalogowano === "false") {
 }
 
 navbar.appendChild(brand);
-navbar.appendChild(navDiv);
 
 toggleButton.appendChild(toggleIcon);
 navbar.appendChild(toggleButton);
+navbar.appendChild(navDiv);
 
 navHomeItem.appendChild(navHome);
 navList.appendChild(navHomeItem);

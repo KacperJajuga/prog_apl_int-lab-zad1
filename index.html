@@ -1,3 +1,5 @@
+<!--  O tym, że strona nie musi posiadać funkcji dowiedziałem się po rozpoczęciu pracy nad zadaniem. Zdecydowałem się dokończyć projekt, aby mniej więcej funkcjonował jak w założeniach. Zauważyłem jeden problem, którego nie udało mi się rozwiązać - navbar nie chcę się zwinąć po ponownym wciśnięciu przycisku. Z tego co zauważyłem, to jest to problem Bootstrapa. "aria-expanded" zmienia się za pierwszym razem na "true", ale nie chce się później zmienić na "false". Dodatkowo div o id "navbarNav" otrzymuje klasę "collapsing" podczas zwijania, ale potem zostają dwie klasy, wzajemnie się wykluczające "collapse" i "show". -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,21 +27,28 @@
         <div class="d-flex align-items-center justify-content-center">
           <div class="card-body">
             <h1 class="card-title">Zadanie 1</h1>
-            <p class="card-text">
+            <p class="card-text lead">
               Ta strona pozwoli Ci na wyświetlanie dostępnych produktów oraz ich
               dodanie, edycję lub usunięcie po zalogowaniu się.
             </p>
-            <div class="d-flex justify-content-around">
-              <a href="./produkty/dodaj.html" class="btn btn-primary" id="add">
+            <div
+              class="d-flex flex-column justify-content-around flex-md-row my-2"
+            >
+              <a
+                href="./produkty/dodaj.html"
+                class="btn btn-primary my-1"
+                id="add"
+              >
                 Dodaj produkt
               </a>
-              <a href="./produkty/lista.html" class="btn btn-primary"
+              <a href="./produkty/lista.html" class="btn btn-primary my-1"
                 >Wyświetl produkty</a
               >
-              <a href="./logowanie.html" class="btn btn-primary" id="log"
+              <a href="./logowanie.html" class="btn btn-primary my-1" id="log"
                 >Zaloguj się</a
               >
             </div>
+            <p class="card-text text-muted">Kacper Jajuga</p>
           </div>
         </div>
       </div>
